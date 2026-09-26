@@ -10,6 +10,7 @@
 content="Sirimane Family Restaurant, Shamnoor. Enjoy delicious food, family dining and a comfortable restaurant experience.">
 
 <style>
+
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap');
 
 *{
@@ -23,7 +24,7 @@ html{
 }
 
 body{
-    background:#090909;
+    background:#080808;
     color:#f8f0df;
     font-family:'Poppins',sans-serif;
     overflow-x:hidden;
@@ -32,7 +33,7 @@ body{
 :root{
     --gold:#d4af37;
     --gold2:#f4d477;
-    --black:#090909;
+    --black:#080808;
     --dark:#11100f;
     --dark2:#181513;
     --burgundy:#4d101d;
@@ -40,7 +41,17 @@ body{
     --muted:#b9ad99;
 }
 
-/* TOP BAR */
+img{
+    max-width:100%;
+    display:block;
+}
+
+a{
+    -webkit-tap-highlight-color:transparent;
+}
+
+
+/* ================= TOP BAR ================= */
 
 .topbar{
     background:#050505;
@@ -54,13 +65,14 @@ body{
     letter-spacing:1px;
 }
 
-/* HEADER */
+
+/* ================= HEADER ================= */
 
 header{
     position:sticky;
     top:0;
     z-index:1000;
-    background:rgba(9,9,9,.94);
+    background:rgba(8,8,8,.94);
     backdrop-filter:blur(14px);
     border-bottom:1px solid rgba(212,175,55,.18);
 }
@@ -113,53 +125,73 @@ header{
     font-size:25px;
 }
 
-/* HERO */
+
+/* ================= HERO ================= */
 
 .hero{
-    min-height:88vh;
+    min-height:90vh;
     display:flex;
     align-items:center;
     position:relative;
     overflow:hidden;
+
     background:
-        radial-gradient(circle at 75% 35%,rgba(104,24,38,.55),transparent 32%),
-        radial-gradient(circle at 20% 80%,rgba(212,175,55,.08),transparent 30%),
-        linear-gradient(135deg,#080808,#160b0d 55%,#090909);
+        linear-gradient(
+            90deg,
+            rgba(5,5,5,.96) 0%,
+            rgba(8,7,7,.86) 35%,
+            rgba(8,7,7,.48) 65%,
+            rgba(8,7,7,.62) 100%
+        ),
+        linear-gradient(
+            180deg,
+            rgba(30,5,10,.20),
+            rgba(0,0,0,.78)
+        ),
+        url("Outdoor.jpeg");
+
+    background-size:cover;
+    background-position:center;
 }
 
 .hero:before{
     content:"";
     position:absolute;
-    width:500px;
-    height:500px;
-    border:1px solid rgba(212,175,55,.12);
-    border-radius:50%;
-    right:-180px;
-    top:100px;
+    inset:0;
+    background:
+        radial-gradient(
+            circle at 80% 25%,
+            rgba(212,175,55,.15),
+            transparent 30%
+        );
+    pointer-events:none;
 }
 
 .hero:after{
     content:"";
     position:absolute;
-    width:350px;
-    height:350px;
-    border:1px solid rgba(212,175,55,.08);
+    width:500px;
+    height:500px;
+    border:1px solid rgba(212,175,55,.13);
     border-radius:50%;
-    right:-100px;
-    top:175px;
+    right:-220px;
+    top:80px;
+    box-shadow:
+        0 0 0 70px rgba(212,175,55,.025),
+        0 0 0 140px rgba(212,175,55,.015);
 }
 
 .hero-content{
     width:100%;
     max-width:1200px;
     margin:auto;
-    padding:70px 5%;
+    padding:90px 5%;
     position:relative;
-    z-index:2;
+    z-index:3;
 }
 
 .small-title{
-    color:var(--gold);
+    color:var(--gold2);
     letter-spacing:4px;
     text-transform:uppercase;
     font-size:11px;
@@ -168,10 +200,11 @@ header{
 
 .hero h1{
     font-family:'Cinzel',serif;
-    font-size:clamp(40px,8vw,78px);
+    font-size:clamp(42px,8vw,78px);
     line-height:1.05;
     max-width:850px;
     color:#fff;
+    text-shadow:0 5px 30px rgba(0,0,0,.6);
 }
 
 .hero h1 span{
@@ -181,9 +214,10 @@ header{
 .hero p{
     max-width:620px;
     margin-top:25px;
-    color:#c9c0b2;
+    color:#e2d9ca;
     line-height:1.8;
     font-size:15px;
+    text-shadow:0 2px 15px #000;
 }
 
 .buttons{
@@ -206,7 +240,7 @@ header{
 .primary{
     background:linear-gradient(135deg,#c49b28,#f1d477);
     color:#111;
-    box-shadow:0 10px 35px rgba(212,175,55,.15);
+    box-shadow:0 10px 35px rgba(212,175,55,.2);
 }
 
 .primary:hover{
@@ -214,41 +248,44 @@ header{
 }
 
 .secondary{
-    border:1px solid rgba(212,175,55,.55);
+    border:1px solid rgba(212,175,55,.7);
     color:var(--gold2);
-    background:rgba(255,255,255,.02);
+    background:rgba(0,0,0,.35);
 }
 
 .secondary:hover{
-    background:rgba(212,175,55,.08);
+    background:rgba(212,175,55,.1);
 }
 
-/* ROYAL SEAL */
+
+/* ================= ROYAL SEAL ================= */
 
 .seal{
     position:absolute;
-    right:10%;
+    right:9%;
     top:50%;
     transform:translateY(-50%);
     width:250px;
     height:250px;
-    border:1px solid rgba(212,175,55,.45);
+    border:1px solid rgba(212,175,55,.55);
     border-radius:50%;
     display:flex;
     align-items:center;
     justify-content:center;
     text-align:center;
-    background:radial-gradient(circle,#241315,#0b0b0b 70%);
+    background:rgba(8,8,8,.65);
+    backdrop-filter:blur(5px);
     box-shadow:
         0 0 0 15px rgba(212,175,55,.025),
-        0 0 80px rgba(212,175,55,.08);
+        0 0 80px rgba(212,175,55,.12);
+    z-index:3;
 }
 
 .seal:before{
     content:"";
     position:absolute;
     inset:12px;
-    border:1px dashed rgba(212,175,55,.3);
+    border:1px dashed rgba(212,175,55,.35);
     border-radius:50%;
 }
 
@@ -274,7 +311,8 @@ header{
     color:var(--gold);
 }
 
-/* SECTION */
+
+/* ================= SECTION ================= */
 
 section{
     padding:85px 5%;
@@ -311,12 +349,17 @@ section{
     line-height:1.8;
 }
 
-/* ABOUT */
+
+/* ================= ABOUT ================= */
 
 .about{
     background:
-        linear-gradient(rgba(10,8,8,.96),rgba(10,8,8,.96)),
-        radial-gradient(circle at 50% 0,#42121e,transparent 60%);
+        radial-gradient(
+            circle at 50% 0,
+            rgba(76,15,29,.55),
+            transparent 55%
+        ),
+        #0a0908;
 }
 
 .about-grid{
@@ -328,14 +371,24 @@ section{
 .info-card{
     background:linear-gradient(145deg,#171311,#0e0d0c);
     border:1px solid rgba(212,175,55,.17);
-    padding:32px;
+    padding:30px;
     border-radius:10px;
     transition:.3s;
+    overflow:hidden;
 }
 
 .info-card:hover{
     border-color:rgba(212,175,55,.5);
     transform:translateY(-5px);
+}
+
+.info-image{
+    width:100%;
+    height:190px;
+    object-fit:cover;
+    border-radius:7px;
+    margin-bottom:22px;
+    filter:saturate(.95);
 }
 
 .icon{
@@ -361,7 +414,8 @@ section{
     font-size:13px;
 }
 
-/* FOOD */
+
+/* ================= FOOD ================= */
 
 .food{
     background:#0c0b0a;
@@ -374,12 +428,10 @@ section{
 }
 
 .food-card{
-    min-height:210px;
-    padding:27px 20px;
-    border-radius:8px;
+    border-radius:9px;
     background:
-        linear-gradient(145deg,rgba(76,15,29,.55),rgba(17,14,13,.9));
-    border:1px solid rgba(212,175,55,.15);
+        linear-gradient(145deg,#211012,#11100f);
+    border:1px solid rgba(212,175,55,.16);
     position:relative;
     overflow:hidden;
     transition:.3s;
@@ -390,16 +442,31 @@ section{
     border-color:rgba(212,175,55,.5);
 }
 
+.food-image{
+    width:100%;
+    height:210px;
+    object-fit:cover;
+    transition:.5s;
+}
+
+.food-card:hover .food-image{
+    transform:scale(1.05);
+}
+
+.food-content{
+    padding:22px 20px 25px;
+}
+
 .food-number{
-    color:rgba(212,175,55,.45);
+    color:rgba(212,175,55,.65);
     font-family:'Cinzel',serif;
-    font-size:30px;
+    font-size:25px;
 }
 
 .food-card h3{
     font-family:'Cinzel',serif;
     font-size:17px;
-    margin:22px 0 10px;
+    margin:12px 0 9px;
 }
 
 .food-card p{
@@ -408,28 +475,106 @@ section{
     line-height:1.7;
 }
 
-/* DISHES */
+
+/* ================= PHOTO GALLERY ================= */
+
+.gallery{
+    background:
+        radial-gradient(
+            circle at 50% 50%,
+            rgba(76,15,29,.3),
+            transparent 55%
+        ),
+        #090808;
+}
+
+.gallery-grid{
+    display:grid;
+    grid-template-columns:1.3fr 1fr 1fr;
+    grid-auto-rows:220px;
+    gap:12px;
+}
+
+.gallery-item{
+    position:relative;
+    overflow:hidden;
+    border-radius:10px;
+    border:1px solid rgba(212,175,55,.18);
+    background:#111;
+}
+
+.gallery-item.large{
+    grid-row:span 2;
+}
+
+.gallery-item img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:.6s;
+}
+
+.gallery-item:hover img{
+    transform:scale(1.07);
+}
+
+.gallery-label{
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:0;
+    padding:25px 17px 15px;
+    background:linear-gradient(transparent,rgba(0,0,0,.9));
+    color:#fff;
+    font-family:'Cinzel',serif;
+    font-size:13px;
+}
+
+
+/* ================= DISHES ================= */
 
 .dishes{
     background:
-        radial-gradient(circle at 50% 50%,rgba(76,15,29,.35),transparent 50%),
+        radial-gradient(
+            circle at 50% 50%,
+            rgba(76,15,29,.35),
+            transparent 50%
+        ),
         #0a0908;
 }
 
 .dish-list{
     display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:12px;
-    max-width:850px;
+    grid-template-columns:1fr 1fr;
+    gap:15px;
+    max-width:900px;
     margin:auto;
 }
 
 .dish{
-    padding:18px 20px;
-    border-bottom:1px solid rgba(212,175,55,.15);
+    min-height:105px;
+    padding:12px;
+    border:1px solid rgba(212,175,55,.13);
+    background:linear-gradient(135deg,#151110,#0c0b0a);
+    border-radius:9px;
     display:flex;
     align-items:center;
     gap:15px;
+    overflow:hidden;
+    transition:.3s;
+}
+
+.dish:hover{
+    border-color:rgba(212,175,55,.45);
+    transform:translateY(-3px);
+}
+
+.dish-image{
+    width:85px;
+    height:80px;
+    object-fit:cover;
+    border-radius:6px;
+    flex-shrink:0;
 }
 
 .dish-icon{
@@ -440,9 +585,11 @@ section{
 .dish span{
     color:#ddd;
     font-size:14px;
+    font-weight:500;
 }
 
-/* HOURS */
+
+/* ================= HOURS ================= */
 
 .hours{
     background:#11100f;
@@ -473,12 +620,19 @@ section{
     color:var(--gold2);
 }
 
-/* CONTACT */
+
+/* ================= CONTACT ================= */
 
 .contact{
     background:
-        linear-gradient(rgba(18,8,10,.95),rgba(18,8,10,.95)),
-        radial-gradient(circle at 50% 0,#551727,transparent 65%);
+        linear-gradient(
+            rgba(18,8,10,.92),
+            rgba(18,8,10,.96)
+        ),
+        url("Interior3.jpeg");
+
+    background-size:cover;
+    background-position:center;
 }
 
 .contact-grid{
@@ -490,7 +644,8 @@ section{
 .contact-box{
     padding:35px;
     border:1px solid rgba(212,175,55,.2);
-    background:rgba(0,0,0,.2);
+    background:rgba(0,0,0,.65);
+    backdrop-filter:blur(8px);
     border-radius:10px;
 }
 
@@ -526,7 +681,8 @@ section{
     font-weight:700;
 }
 
-/* FOOTER */
+
+/* ================= FOOTER ================= */
 
 footer{
     padding:35px 5%;
@@ -553,7 +709,8 @@ footer p{
     font-size:9px;
 }
 
-/* FLOAT CALL */
+
+/* ================= FLOAT CALL ================= */
 
 .float-call{
     position:fixed;
@@ -573,7 +730,8 @@ footer p{
     z-index:2000;
 }
 
-/* MOBILE */
+
+/* ================= MOBILE ================= */
 
 @media(max-width:850px){
 
@@ -586,11 +744,16 @@ footer p{
     }
 
     .hero{
-        min-height:82vh;
+        min-height:85vh;
+        background-position:58% center;
     }
 
     .seal{
         display:none;
+    }
+
+    .hero-content{
+        padding:85px 5%;
     }
 
     .hero h1{
@@ -606,10 +769,20 @@ footer p{
         grid-template-columns:1fr 1fr;
     }
 
+    .gallery-grid{
+        grid-template-columns:1fr 1fr;
+        grid-auto-rows:190px;
+    }
+
+    .gallery-item.large{
+        grid-row:span 2;
+    }
+
     .dish-list{
         grid-template-columns:1fr;
     }
 }
+
 
 @media(max-width:520px){
 
@@ -617,9 +790,14 @@ footer p{
         padding:70px 5%;
     }
 
+    .hero{
+        min-height:90vh;
+        background-position:60% center;
+    }
+
     .hero-content{
-        padding-top:80px;
-        padding-bottom:80px;
+        padding-top:100px;
+        padding-bottom:90px;
     }
 
     .hero h1{
@@ -634,6 +812,10 @@ footer p{
         grid-template-columns:1fr;
     }
 
+    .food-image{
+        height:225px;
+    }
+
     .section-head h2{
         font-size:28px;
     }
@@ -642,17 +824,70 @@ footer p{
     .contact-box{
         padding:25px;
     }
+
+    .info-image{
+        height:210px;
+    }
+
+    .gallery-grid{
+        grid-template-columns:1fr;
+        grid-auto-rows:230px;
+    }
+
+    .gallery-item.large{
+        grid-row:span 1;
+        height:300px;
+    }
+
+    .gallery-label{
+        font-size:12px;
+    }
+
+    .dish{
+        min-height:95px;
+    }
+
+    .dish-image{
+        width:75px;
+        height:70px;
+    }
+
+    .day{
+        font-size:11px;
+    }
+
+    .topbar{
+        font-size:9px;
+    }
+
+    .logo{
+        font-size:17px;
+    }
+
+    .logo span{
+        font-size:7px;
+        letter-spacing:2px;
+    }
 }
+
 </style>
 </head>
 
+
 <body>
+
+
+<!-- TOP BAR -->
 
 <div class="topbar">
     ✦ SHAMNOOR'S ROYAL FAMILY DINING EXPERIENCE ✦
 </div>
 
+
+<!-- HEADER -->
+
 <header>
+
     <div class="nav">
 
         <div class="logo">
@@ -663,14 +898,18 @@ footer p{
         <div class="navlinks">
             <a href="#about">About</a>
             <a href="#food">Cuisine</a>
+            <a href="#gallery">Gallery</a>
             <a href="#dishes">Specialties</a>
             <a href="#hours">Hours</a>
             <a href="#contact">Contact</a>
         </div>
 
-        <div class="menu-btn">☰</div>
+        <div class="menu-btn">
+            ☰
+        </div>
 
     </div>
+
 </header>
 
 
@@ -712,16 +951,25 @@ footer p{
 
     </div>
 
+
+    <!-- ROYAL SEAL -->
+
     <div class="seal">
 
         <div class="seal-inner">
-            <div class="crown">♛</div>
 
-            <h3>SIRIMANE</h3>
+            <div class="crown">
+                ♛
+            </div>
+
+            <h3>
+                SIRIMANE
+            </h3>
 
             <small>
                 FAMILY RESTAURANT • SHAMNOOR
             </small>
+
         </div>
 
     </div>
@@ -737,9 +985,13 @@ footer p{
 
         <div class="section-head">
 
-            <small>Welcome</small>
+            <small>
+                Welcome
+            </small>
 
-            <h2>A Place to Gather</h2>
+            <h2>
+                A Place to Gather
+            </h2>
 
             <p>
                 Enjoy delicious food and a comfortable
@@ -752,11 +1004,21 @@ footer p{
 
         <div class="about-grid">
 
+
             <div class="info-card">
 
-                <div class="icon">♛</div>
+                <img
+                    class="info-image"
+                    src="Interior.jpeg"
+                    alt="Sirimane Family Restaurant interior">
 
-                <h3>Royal Dining</h3>
+                <div class="icon">
+                    ♛
+                </div>
+
+                <h3>
+                    Royal Dining
+                </h3>
 
                 <p>
                     A restaurant experience designed for
@@ -768,14 +1030,22 @@ footer p{
 
             <div class="info-card">
 
-                <div class="icon">✦</div>
+                <img
+                    class="info-image"
+                    src="Interior1.jpeg"
+                    alt="Restaurant dining area">
 
-                <h3>Food & Flavours</h3>
+                <div class="icon">
+                    ✦
+                </div>
+
+                <h3>
+                    Comfortable Atmosphere
+                </h3>
 
                 <p>
-                    Enjoy a selection of delicious dishes
-                    prepared for a satisfying family dining
-                    experience.
+                    Enjoy your meal in a welcoming restaurant
+                    atmosphere with family and friends.
                 </p>
 
             </div>
@@ -783,13 +1053,22 @@ footer p{
 
             <div class="info-card">
 
-                <div class="icon">⌂</div>
+                <img
+                    class="info-image"
+                    src="Interior3.jpeg"
+                    alt="Sirimane restaurant dining space">
 
-                <h3>Shamnoor</h3>
+                <div class="icon">
+                    ⌂
+                </div>
+
+                <h3>
+                    Shamnoor
+                </h3>
 
                 <p>
-                    Conveniently located in the Shamnoor
-                    area near Davanagere.
+                    Located in the Shamnoor area near
+                    Davanagere, Karnataka.
                 </p>
 
             </div>
@@ -797,16 +1076,26 @@ footer p{
 
             <div class="info-card">
 
-                <div class="icon">◷</div>
+                <img
+                    class="info-image"
+                    src="Outdoor.jpeg"
+                    alt="Sirimane Family Restaurant exterior">
 
-                <h3>Open Daily</h3>
+                <div class="icon">
+                    ◷
+                </div>
+
+                <h3>
+                    Visit Us
+                </h3>
 
                 <p>
-                    Visit us during our regular business
-                    hours for lunch, dinner and evening dining.
+                    Step inside, enjoy delicious food and
+                    spend quality time with your loved ones.
                 </p>
 
             </div>
+
 
         </div>
 
@@ -823,13 +1112,17 @@ footer p{
 
         <div class="section-head">
 
-            <small>Our Experience</small>
+            <small>
+                Our Experience
+            </small>
 
-            <h2>Food & Dining</h2>
+            <h2>
+                Food & Dining
+            </h2>
 
             <p>
-                A selection of dining categories presented
-                in a premium restaurant experience.
+                Explore some of the food and drinks
+                featured in the restaurant experience.
             </p>
 
         </div>
@@ -837,61 +1130,222 @@ footer p{
 
         <div class="food-grid">
 
+
+            <!-- CHICKEN -->
+
             <div class="food-card">
 
-                <div class="food-number">01</div>
+                <img
+                    class="food-image"
+                    src="Chicken.jpeg"
+                    alt="Chicken dish">
 
-                <h3>Chicken Specials</h3>
+                <div class="food-content">
 
-                <p>
-                    Delicious chicken preparations for
-                    guests looking for rich and satisfying
-                    flavours.
-                </p>
+                    <div class="food-number">
+                        01
+                    </div>
+
+                    <h3>
+                        Chicken Specials
+                    </h3>
+
+                    <p>
+                        Delicious chicken preparations
+                        for guests looking for rich
+                        and satisfying flavours.
+                    </p>
+
+                </div>
 
             </div>
 
 
+            <!-- KEBAB -->
+
             <div class="food-card">
 
-                <div class="food-number">02</div>
+                <img
+                    class="food-image"
+                    src="Kabab.jpg"
+                    alt="Kebab dish">
 
-                <h3>Kebabs</h3>
+                <div class="food-content">
 
-                <p>
-                    Enjoy tasty grilled-style and kebab
-                    options for a memorable meal.
-                </p>
+                    <div class="food-number">
+                        02
+                    </div>
+
+                    <h3>
+                        Kebab Selection
+                    </h3>
+
+                    <p>
+                        Enjoy grilled-style and kebab
+                        dishes for a memorable meal.
+                    </p>
+
+                </div>
 
             </div>
 
 
+            <!-- GRILLED -->
+
             <div class="food-card">
 
-                <div class="food-number">03</div>
+                <img
+                    class="food-image"
+                    src="Grilled.jpg"
+                    alt="Grilled food">
 
-                <h3>Family Dining</h3>
+                <div class="food-content">
 
-                <p>
-                    A welcoming dining environment for
-                    families and friends.
-                </p>
+                    <div class="food-number">
+                        03
+                    </div>
+
+                    <h3>
+                        Grilled Favourites
+                    </h3>
+
+                    <p>
+                        Rich grilled flavours presented
+                        for family dining and sharing.
+                    </p>
+
+                </div>
 
             </div>
 
 
+            <!-- CHICKEN 2 -->
+
             <div class="food-card">
 
-                <div class="food-number">04</div>
+                <img
+                    class="food-image"
+                    src="Chicken1.jpeg"
+                    alt="Chicken speciality">
 
-                <h3>Evening Dining</h3>
+                <div class="food-content">
 
-                <p>
-                    Relax and enjoy your evening with
-                    delicious food and good company.
-                </p>
+                    <div class="food-number">
+                        04
+                    </div>
+
+                    <h3>
+                        Signature Chicken
+                    </h3>
+
+                    <p>
+                        A delicious selection of chicken
+                        dishes for non-vegetarian food lovers.
+                    </p>
+
+                </div>
 
             </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- PHOTO GALLERY -->
+
+<section class="gallery" id="gallery">
+
+    <div class="container">
+
+        <div class="section-head">
+
+            <small>
+                Restaurant Gallery
+            </small>
+
+            <h2>
+                Experience Sirimane
+            </h2>
+
+            <p>
+                Take a look at the restaurant atmosphere
+                and some of the dishes and drinks.
+            </p>
+
+        </div>
+
+
+        <div class="gallery-grid">
+
+
+            <div class="gallery-item large">
+
+                <img
+                    src="Biryani.jpeg"
+                    alt="Biryani at Sirimane Family Restaurant">
+
+                <div class="gallery-label">
+                    Biryani
+                </div>
+
+            </div>
+
+
+            <div class="gallery-item">
+
+                <img
+                    src="South.jpeg"
+                    alt="South Indian food">
+
+                <div class="gallery-label">
+                    South Indian Favourites
+                </div>
+
+            </div>
+
+
+            <div class="gallery-item">
+
+                <img
+                    src="Moctale.jpeg"
+                    alt="Mocktail">
+
+                <div class="gallery-label">
+                    Refreshing Drinks
+                </div>
+
+            </div>
+
+
+            <div class="gallery-item">
+
+                <img
+                    src="Coffee.jpeg"
+                    alt="Coffee">
+
+                <div class="gallery-label">
+                    Tea & Coffee
+                </div>
+
+            </div>
+
+
+            <div class="gallery-item">
+
+                <img
+                    src="Interior3.jpeg"
+                    alt="Restaurant interior">
+
+                <div class="gallery-label">
+                    Family Dining
+                </div>
+
+            </div>
+
 
         </div>
 
@@ -908,9 +1362,13 @@ footer p{
 
         <div class="section-head">
 
-            <small>Our Specialties</small>
+            <small>
+                Our Specialties
+            </small>
 
-            <h2>Popular Choices</h2>
+            <h2>
+                Popular Choices
+            </h2>
 
             <p>
                 Discover some of the flavours guests
@@ -922,35 +1380,90 @@ footer p{
 
         <div class="dish-list">
 
-            <div class="dish">
-                <div class="dish-icon">✦</div>
-                <span>Chicken Specials</span>
-            </div>
 
             <div class="dish">
-                <div class="dish-icon">✦</div>
-                <span>Pepper Chicken</span>
+
+                <img
+                    class="dish-image"
+                    src="Biryani.jpeg"
+                    alt="Biryani">
+
+                <span>
+                    Biryani
+                </span>
+
             </div>
 
-            <div class="dish">
-                <div class="dish-icon">✦</div>
-                <span>Lemon Chicken</span>
-            </div>
 
             <div class="dish">
-                <div class="dish-icon">✦</div>
-                <span>Chicken Kebabs</span>
+
+                <img
+                    class="dish-image"
+                    src="Chicken1.jpeg"
+                    alt="Chicken special">
+
+                <span>
+                    Chicken Specials
+                </span>
+
             </div>
 
-            <div class="dish">
-                <div class="dish-icon">✦</div>
-                <span>Chicken Skewers</span>
-            </div>
 
             <div class="dish">
-                <div class="dish-icon">✦</div>
-                <span>Non-Vegetarian Specialities</span>
+
+                <img
+                    class="dish-image"
+                    src="Kabab.jpg"
+                    alt="Chicken kebab">
+
+                <span>
+                    Chicken Kebabs
+                </span>
+
             </div>
+
+
+            <div class="dish">
+
+                <img
+                    class="dish-image"
+                    src="Grilled.jpg"
+                    alt="Grilled food">
+
+                <span>
+                    Grilled Favourites
+                </span>
+
+            </div>
+
+
+            <div class="dish">
+
+                <img
+                    class="dish-image"
+                    src="South.jpeg"
+                    alt="South Indian food">
+
+                <span>
+                    South Indian Specialities
+                </span>
+
+            </div>
+
+
+            <div class="dish">
+
+                <img
+                    class="dish-image"
+                    src="Moctale.jpeg"
+                    alt="Refreshing mocktail">
+
+                <span>
+                    Refreshing Mocktails
+                </span>
+
+            </div>
+
 
         </div>
 
@@ -967,9 +1480,13 @@ footer p{
 
         <div class="section-head">
 
-            <small>Visit Us</small>
+            <small>
+                Visit Us
+            </small>
 
-            <h2>Opening Hours</h2>
+            <h2>
+                Opening Hours
+            </h2>
 
         </div>
 
@@ -1026,9 +1543,13 @@ footer p{
 
         <div class="section-head">
 
-            <small>Contact</small>
+            <small>
+                Contact
+            </small>
 
-            <h2>Find Sirimane</h2>
+            <h2>
+                Find Sirimane
+            </h2>
 
             <p>
                 Call us or get directions to the restaurant.
@@ -1039,11 +1560,14 @@ footer p{
 
         <div class="contact-grid">
 
+
             <div class="contact-box">
 
                 <div class="contact-item">
 
-                    <small>Restaurant</small>
+                    <small>
+                        Restaurant
+                    </small>
 
                     <p>
                         Sirimane Family Restaurant
@@ -1054,7 +1578,9 @@ footer p{
 
                 <div class="contact-item">
 
-                    <small>Phone</small>
+                    <small>
+                        Phone
+                    </small>
 
                     <a href="tel:+919482677657">
                         +91 94826 77657
@@ -1065,7 +1591,9 @@ footer p{
 
                 <div class="contact-item">
 
-                    <small>Location</small>
+                    <small>
+                        Location
+                    </small>
 
                     <p>
                         Shamnoor,<br>
@@ -1082,7 +1610,9 @@ footer p{
 
                 <div class="contact-item">
 
-                    <small>Dining</small>
+                    <small>
+                        Dining
+                    </small>
 
                     <p>
                         Family Restaurant
@@ -1093,7 +1623,9 @@ footer p{
 
                 <div class="contact-item">
 
-                    <small>Visit Us</small>
+                    <small>
+                        Visit Us
+                    </small>
 
                     <p>
                         Experience delicious food,
@@ -1103,15 +1635,17 @@ footer p{
                 </div>
 
 
-                <a class="map-btn"
-                   href="https://www.google.com/maps/search/?api=1&query=Sirimane+Family+Restaurant+Shamnoor+Davanagere"
-                   target="_blank">
+                <a
+                    class="map-btn"
+                    href="https://www.google.com/maps/search/?api=1&query=Sirimane+Family+Restaurant+Shamnoor+Davanagere"
+                    target="_blank">
 
                     📍 OPEN IN GOOGLE MAPS
 
                 </a>
 
             </div>
+
 
         </div>
 
@@ -1124,7 +1658,9 @@ footer p{
 
 <footer>
 
-    <h3>SIRIMANE</h3>
+    <h3>
+        SIRIMANE
+    </h3>
 
     <p>
         FAMILY RESTAURANT • SHAMNOOR
@@ -1140,11 +1676,15 @@ footer p{
 
 <!-- FLOATING CALL BUTTON -->
 
-<a class="float-call"
-   href="tel:+919482677657"
-   aria-label="Call Sirimane Family Restaurant">
+<a
+    class="float-call"
+    href="tel:+919482677657"
+    aria-label="Call Sirimane Family Restaurant">
+
     ☎
+
 </a>
 
+
 </body>
-</html>
+                </html>
