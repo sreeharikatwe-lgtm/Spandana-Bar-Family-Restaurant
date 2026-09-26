@@ -1,0 +1,1129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Spandana Bar & Family Restaurant | Davanagere</title>
+
+<meta name="description"
+content="Spandana Bar & Family Restaurant, Shamanur Road, Davanagere. Family dining, delicious food and a comfortable dining atmosphere.">
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#090909;
+    color:#f8f0df;
+    font-family:'Poppins',sans-serif;
+    overflow-x:hidden;
+}
+
+:root{
+    --gold:#d4af37;
+    --gold2:#f4d477;
+    --black:#090909;
+    --dark:#11100f;
+    --dark2:#181513;
+    --burgundy:#4d101d;
+    --cream:#f8f0df;
+    --muted:#b9ad99;
+}
+
+/* TOP BAR */
+
+.topbar{
+    background:#050505;
+    border-bottom:1px solid rgba(212,175,55,.25);
+    padding:9px 5%;
+    display:flex;
+    justify-content:center;
+    text-align:center;
+    font-size:12px;
+    color:var(--gold2);
+    letter-spacing:1px;
+}
+
+/* HEADER */
+
+header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:rgba(9,9,9,.94);
+    backdrop-filter:blur(14px);
+    border-bottom:1px solid rgba(212,175,55,.18);
+}
+
+.nav{
+    max-width:1200px;
+    margin:auto;
+    padding:17px 5%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-family:'Cinzel',serif;
+    font-size:20px;
+    font-weight:700;
+    color:var(--gold2);
+    letter-spacing:1.5px;
+}
+
+.logo span{
+    display:block;
+    font-family:'Poppins',sans-serif;
+    font-size:8px;
+    letter-spacing:3px;
+    color:#aaa;
+    margin-top:3px;
+}
+
+.navlinks{
+    display:flex;
+    gap:25px;
+}
+
+.navlinks a{
+    text-decoration:none;
+    color:#ddd;
+    font-size:13px;
+    transition:.3s;
+}
+
+.navlinks a:hover{
+    color:var(--gold);
+}
+
+.menu-btn{
+    display:none;
+    color:var(--gold);
+    font-size:25px;
+}
+
+/* HERO */
+
+.hero{
+    min-height:88vh;
+    display:flex;
+    align-items:center;
+    position:relative;
+    overflow:hidden;
+    background:
+        radial-gradient(circle at 75% 35%,rgba(104,24,38,.55),transparent 32%),
+        radial-gradient(circle at 20% 80%,rgba(212,175,55,.08),transparent 30%),
+        linear-gradient(135deg,#080808,#160b0d 55%,#090909);
+}
+
+.hero:before{
+    content:"";
+    position:absolute;
+    width:500px;
+    height:500px;
+    border:1px solid rgba(212,175,55,.12);
+    border-radius:50%;
+    right:-180px;
+    top:100px;
+}
+
+.hero:after{
+    content:"";
+    position:absolute;
+    width:350px;
+    height:350px;
+    border:1px solid rgba(212,175,55,.08);
+    border-radius:50%;
+    right:-100px;
+    top:175px;
+}
+
+.hero-content{
+    width:100%;
+    max-width:1200px;
+    margin:auto;
+    padding:70px 5%;
+    position:relative;
+    z-index:2;
+}
+
+.small-title{
+    color:var(--gold);
+    letter-spacing:4px;
+    text-transform:uppercase;
+    font-size:11px;
+    margin-bottom:20px;
+}
+
+.hero h1{
+    font-family:'Cinzel',serif;
+    font-size:clamp(40px,8vw,78px);
+    line-height:1.05;
+    max-width:850px;
+    color:#fff;
+}
+
+.hero h1 span{
+    color:var(--gold2);
+}
+
+.hero p{
+    max-width:620px;
+    margin-top:25px;
+    color:#c9c0b2;
+    line-height:1.8;
+    font-size:15px;
+}
+
+.buttons{
+    display:flex;
+    gap:13px;
+    flex-wrap:wrap;
+    margin-top:32px;
+}
+
+.btn{
+    text-decoration:none;
+    padding:14px 22px;
+    border-radius:4px;
+    font-weight:600;
+    font-size:13px;
+    letter-spacing:.4px;
+    transition:.3s;
+}
+
+.primary{
+    background:linear-gradient(135deg,#c49b28,#f1d477);
+    color:#111;
+    box-shadow:0 10px 35px rgba(212,175,55,.15);
+}
+
+.primary:hover{
+    transform:translateY(-3px);
+}
+
+.secondary{
+    border:1px solid rgba(212,175,55,.55);
+    color:var(--gold2);
+    background:rgba(255,255,255,.02);
+}
+
+.secondary:hover{
+    background:rgba(212,175,55,.08);
+}
+
+/* ROYAL SEAL */
+
+.seal{
+    position:absolute;
+    right:10%;
+    top:50%;
+    transform:translateY(-50%);
+    width:250px;
+    height:250px;
+    border:1px solid rgba(212,175,55,.45);
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    background:radial-gradient(circle,#241315,#0b0b0b 70%);
+    box-shadow:
+        0 0 0 15px rgba(212,175,55,.025),
+        0 0 80px rgba(212,175,55,.08);
+}
+
+.seal:before{
+    content:"";
+    position:absolute;
+    inset:12px;
+    border:1px dashed rgba(212,175,55,.3);
+    border-radius:50%;
+}
+
+.seal-inner{
+    position:relative;
+    z-index:2;
+}
+
+.seal .crown{
+    font-size:40px;
+    color:var(--gold);
+}
+
+.seal h3{
+    font-family:'Cinzel',serif;
+    font-size:18px;
+    color:#fff;
+}
+
+.seal small{
+    font-size:8px;
+    letter-spacing:3px;
+    color:var(--gold);
+}
+
+/* SECTION */
+
+section{
+    padding:85px 5%;
+}
+
+.container{
+    max-width:1150px;
+    margin:auto;
+}
+
+.section-head{
+    text-align:center;
+    margin-bottom:48px;
+}
+
+.section-head small{
+    color:var(--gold);
+    letter-spacing:4px;
+    font-size:10px;
+    text-transform:uppercase;
+}
+
+.section-head h2{
+    font-family:'Cinzel',serif;
+    font-size:34px;
+    margin-top:10px;
+}
+
+.section-head p{
+    max-width:650px;
+    margin:14px auto 0;
+    color:var(--muted);
+    font-size:14px;
+    line-height:1.8;
+}
+
+/* ABOUT */
+
+.about{
+    background:
+        linear-gradient(rgba(10,8,8,.96),rgba(10,8,8,.96)),
+        radial-gradient(circle at 50% 0,#42121e,transparent 60%);
+}
+
+.about-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:25px;
+}
+
+.info-card{
+    background:linear-gradient(145deg,#171311,#0e0d0c);
+    border:1px solid rgba(212,175,55,.17);
+    padding:32px;
+    border-radius:10px;
+    transition:.3s;
+}
+
+.info-card:hover{
+    border-color:rgba(212,175,55,.5);
+    transform:translateY(-5px);
+}
+
+.icon{
+    width:45px;
+    height:45px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border:1px solid rgba(212,175,55,.35);
+    color:var(--gold2);
+    border-radius:50%;
+    margin-bottom:20px;
+}
+
+.info-card h3{
+    font-family:'Cinzel',serif;
+    margin-bottom:12px;
+}
+
+.info-card p{
+    color:var(--muted);
+    line-height:1.8;
+    font-size:13px;
+}
+
+/* FOOD */
+
+.food{
+    background:#0c0b0a;
+}
+
+.food-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:16px;
+}
+
+.food-card{
+    min-height:210px;
+    padding:27px 20px;
+    border-radius:8px;
+    background:
+        linear-gradient(145deg,rgba(76,15,29,.55),rgba(17,14,13,.9));
+    border:1px solid rgba(212,175,55,.15);
+    position:relative;
+    overflow:hidden;
+    transition:.3s;
+}
+
+.food-card:hover{
+    transform:translateY(-7px);
+    border-color:rgba(212,175,55,.5);
+}
+
+.food-number{
+    color:rgba(212,175,55,.45);
+    font-family:'Cinzel',serif;
+    font-size:30px;
+}
+
+.food-card h3{
+    font-family:'Cinzel',serif;
+    font-size:17px;
+    margin:22px 0 10px;
+}
+
+.food-card p{
+    color:#a9a096;
+    font-size:12px;
+    line-height:1.7;
+}
+
+/* DISHES */
+
+.dishes{
+    background:
+        radial-gradient(circle at 50% 50%,rgba(76,15,29,.35),transparent 50%),
+        #0a0908;
+}
+
+.dish-list{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:12px;
+    max-width:850px;
+    margin:auto;
+}
+
+.dish{
+    padding:18px 20px;
+    border-bottom:1px solid rgba(212,175,55,.15);
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.dish-icon{
+    color:var(--gold);
+    font-size:16px;
+}
+
+.dish span{
+    color:#ddd;
+    font-size:14px;
+}
+
+/* HOURS */
+
+.hours{
+    background:#11100f;
+}
+
+.hours-card{
+    max-width:800px;
+    margin:auto;
+    border:1px solid rgba(212,175,55,.2);
+    background:linear-gradient(135deg,#171412,#0c0b0a);
+    border-radius:12px;
+    padding:35px;
+}
+
+.day{
+    display:flex;
+    justify-content:space-between;
+    padding:13px 0;
+    border-bottom:1px solid rgba(255,255,255,.06);
+    font-size:13px;
+}
+
+.day:last-child{
+    border-bottom:none;
+}
+
+.day span:last-child{
+    color:var(--gold2);
+}
+
+/* CONTACT */
+
+.contact{
+    background:
+        linear-gradient(rgba(18,8,10,.95),rgba(18,8,10,.95)),
+        radial-gradient(circle at 50% 0,#551727,transparent 65%);
+}
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:25px;
+}
+
+.contact-box{
+    padding:35px;
+    border:1px solid rgba(212,175,55,.2);
+    background:rgba(0,0,0,.2);
+    border-radius:10px;
+}
+
+.contact-item{
+    margin-bottom:25px;
+}
+
+.contact-item small{
+    color:var(--gold);
+    text-transform:uppercase;
+    letter-spacing:2px;
+    font-size:9px;
+}
+
+.contact-item p,
+.contact-item a{
+    display:block;
+    color:#eee;
+    margin-top:7px;
+    font-size:14px;
+    line-height:1.7;
+    text-decoration:none;
+}
+
+.map-btn{
+    display:inline-block;
+    margin-top:10px;
+    color:#111;
+    background:var(--gold2);
+    padding:12px 18px;
+    border-radius:4px;
+    font-size:12px;
+    font-weight:700;
+}
+
+/* FOOTER */
+
+footer{
+    padding:35px 5%;
+    background:#050505;
+    text-align:center;
+    border-top:1px solid rgba(212,175,55,.15);
+}
+
+footer h3{
+    font-family:'Cinzel',serif;
+    color:var(--gold2);
+    font-size:18px;
+}
+
+footer p{
+    color:#777;
+    font-size:11px;
+    margin-top:8px;
+}
+
+.legal{
+    margin-top:18px;
+    color:#666;
+    font-size:9px;
+}
+
+/* FLOAT CALL */
+
+.float-call{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    width:55px;
+    height:55px;
+    border-radius:50%;
+    background:linear-gradient(135deg,#c49b28,#f1d477);
+    color:#111;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-decoration:none;
+    font-size:21px;
+    box-shadow:0 8px 30px rgba(0,0,0,.5);
+    z-index:2000;
+}
+
+/* MOBILE */
+
+@media(max-width:850px){
+
+    .navlinks{
+        display:none;
+    }
+
+    .menu-btn{
+        display:block;
+    }
+
+    .hero{
+        min-height:82vh;
+    }
+
+    .seal{
+        display:none;
+    }
+
+    .hero h1{
+        font-size:45px;
+    }
+
+    .about-grid,
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
+
+    .food-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .dish-list{
+        grid-template-columns:1fr;
+    }
+}
+
+@media(max-width:520px){
+
+    section{
+        padding:70px 5%;
+    }
+
+    .hero-content{
+        padding-top:80px;
+        padding-bottom:80px;
+    }
+
+    .hero h1{
+        font-size:39px;
+    }
+
+    .hero p{
+        font-size:13px;
+    }
+
+    .food-grid{
+        grid-template-columns:1fr;
+    }
+
+    .section-head h2{
+        font-size:28px;
+    }
+
+    .info-card,
+    .contact-box{
+        padding:25px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="topbar">
+    ✦ DAVANAGERE'S ROYAL FAMILY DINING EXPERIENCE ✦
+</div>
+
+<header>
+    <div class="nav">
+
+        <div class="logo">
+            SPANDANA
+            <span>BAR & FAMILY RESTAURANT</span>
+        </div>
+
+        <div class="navlinks">
+            <a href="#about">About</a>
+            <a href="#food">Cuisine</a>
+            <a href="#dishes">Specialties</a>
+            <a href="#hours">Hours</a>
+            <a href="#contact">Contact</a>
+        </div>
+
+        <div class="menu-btn">☰</div>
+
+    </div>
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="small-title">
+            Shamanur Road • Davanagere
+        </div>
+
+        <h1>
+            Dine with<br>
+            <span>Royal Taste.</span>
+        </h1>
+
+        <p>
+            Welcome to Spandana Bar & Family Restaurant —
+            a destination for food, family and memorable evenings
+            in the heart of Davanagere.
+        </p>
+
+        <div class="buttons">
+
+            <a class="btn primary"
+               href="tel:+919482677657">
+                ☎ Call Now
+            </a>
+
+            <a class="btn secondary"
+               href="https://www.google.com/maps/search/?api=1&query=Spandana+Bar+%26+Family+Restaurant+Davanagere"
+               target="_blank">
+                📍 Get Directions
+            </a>
+
+        </div>
+
+    </div>
+
+    <div class="seal">
+
+        <div class="seal-inner">
+            <div class="crown">♛</div>
+            <h3>SPANDANA</h3>
+            <small>BAR • FAMILY • RESTAURANT</small>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section class="about" id="about">
+
+    <div class="container">
+
+        <div class="section-head">
+
+            <small>Welcome</small>
+
+            <h2>A Place to Gather</h2>
+
+            <p>
+                Enjoy food and a comfortable dining atmosphere
+                at Spandana Bar & Family Restaurant, Davanagere.
+            </p>
+
+        </div>
+
+
+        <div class="about-grid">
+
+            <div class="info-card">
+
+                <div class="icon">♛</div>
+
+                <h3>Royal Dining</h3>
+
+                <p>
+                    A restaurant experience designed for
+                    families, friends and relaxed evenings.
+                </p>
+
+            </div>
+
+
+            <div class="info-card">
+
+                <div class="icon">✦</div>
+
+                <h3>Food & Flavours</h3>
+
+                <p>
+                    Public restaurant listings frequently mention
+                    chicken dishes, pepper chicken, lemon chicken,
+                    kebabs and other food options.
+                </p>
+
+            </div>
+
+
+            <div class="info-card">
+
+                <div class="icon">⌂</div>
+
+                <h3>Prime Location</h3>
+
+                <p>
+                    Conveniently located on Shamanur Road,
+                    opposite Karnataka Bank, MCC, Davanagere.
+                </p>
+
+            </div>
+
+
+            <div class="info-card">
+
+                <div class="icon">◷</div>
+
+                <h3>Open Daily</h3>
+
+                <p>
+                    Current public listings show operating hours
+                    from approximately 10:00 AM to 11:30 PM.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FOOD -->
+
+<section class="food" id="food">
+
+    <div class="container">
+
+        <div class="section-head">
+
+            <small>Our Experience</small>
+
+            <h2>Food & Dining</h2>
+
+            <p>
+                A selection of dining categories presented
+                in a premium restaurant experience.
+            </p>
+
+        </div>
+
+
+        <div class="food-grid">
+
+            <div class="food-card">
+                <div class="food-number">01</div>
+                <h3>Chicken Specials</h3>
+                <p>
+                    Enjoy chicken preparations mentioned
+                    by guests in public reviews.
+                </p>
+            </div>
+
+            <div class="food-card">
+                <div class="food-number">02</div>
+                <h3>Kebabs</h3>
+                <p>
+                    Kebab and grilled-style dishes are among
+                    the foods frequently mentioned by visitors.
+                </p>
+            </div>
+
+            <div class="food-card">
+                <div class="food-number">03</div>
+                <h3>Family Dining</h3>
+                <p>
+                    A welcoming restaurant environment for
+                    family and friends.
+                </p>
+            </div>
+
+            <div class="food-card">
+                <div class="food-number">04</div>
+                <h3>Evening Dining</h3>
+                <p>
+                    Open into the evening for relaxed dining
+                    and social gatherings.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- POPULAR DISHES -->
+
+<section class="dishes" id="dishes">
+
+    <div class="container">
+
+        <div class="section-head">
+
+            <small>Guest Mentions</small>
+
+            <h2>Popularly Mentioned</h2>
+
+            <p>
+                These dishes are based on foods frequently
+                mentioned in public customer reviews.
+            </p>
+
+        </div>
+
+
+        <div class="dish-list">
+
+            <div class="dish">
+                <div class="dish-icon">✦</div>
+                <span>Chicken</span>
+            </div>
+
+            <div class="dish">
+                <div class="dish-icon">✦</div>
+                <span>Pepper Chicken</span>
+            </div>
+
+            <div class="dish">
+                <div class="dish-icon">✦</div>
+                <span>Lemon Chicken</span>
+            </div>
+
+            <div class="dish">
+                <div class="dish-icon">✦</div>
+                <span>Chicken Kebabs</span>
+            </div>
+
+            <div class="dish">
+                <div class="dish-icon">✦</div>
+                <span>Chicken Skewers</span>
+            </div>
+
+            <div class="dish">
+                <div class="dish-icon">✦</div>
+                <span>Non-Vegetarian Specialities</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- HOURS -->
+
+<section class="hours" id="hours">
+
+    <div class="container">
+
+        <div class="section-head">
+
+            <small>Visit Us</small>
+
+            <h2>Opening Hours</h2>
+
+        </div>
+
+
+        <div class="hours-card">
+
+            <div class="day">
+                <span>Monday</span>
+                <span>10:00 AM – 11:30 PM</span>
+            </div>
+
+            <div class="day">
+                <span>Tuesday</span>
+                <span>10:00 AM – 11:30 PM</span>
+            </div>
+
+            <div class="day">
+                <span>Wednesday</span>
+                <span>10:00 AM – 11:30 PM</span>
+            </div>
+
+            <div class="day">
+                <span>Thursday</span>
+                <span>10:00 AM – 11:30 PM</span>
+            </div>
+
+            <div class="day">
+                <span>Friday</span>
+                <span>10:00 AM – 11:30 PM</span>
+            </div>
+
+            <div class="day">
+                <span>Saturday</span>
+                <span>10:00 AM – 11:30 PM</span>
+            </div>
+
+            <div class="day">
+                <span>Sunday</span>
+                <span>10:00 AM – 11:30 PM</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+    <div class="container">
+
+        <div class="section-head">
+
+            <small>Contact</small>
+
+            <h2>Find Spandana</h2>
+
+            <p>
+                Call us or get directions to the restaurant.
+            </p>
+
+        </div>
+
+
+        <div class="contact-grid">
+
+            <div class="contact-box">
+
+                <div class="contact-item">
+
+                    <small>Restaurant</small>
+
+                    <p>
+                        Spandana Bar & Family Restaurant
+                    </p>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <small>Phone</small>
+
+                    <a href="tel:+919482677657">
+                        +91 94826 77657
+                    </a>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <small>Address</small>
+
+                    <p>
+                        Shamanur Road,<br>
+                        Opposite Karnataka Bank,<br>
+                        MCC, Davanagere,<br>
+                        Karnataka – 577005
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="contact-box">
+
+                <div class="contact-item">
+
+                    <small>Location</small>
+
+                    <p>
+                        Shamanur Road, MCC,
+                        Davanagere, Karnataka
+                    </p>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <small>Google Rating</small>
+
+                    <p>
+                        ★ 3.6 / 5<br>
+                        <span style="color:#aaa;font-size:11px;">
+                            Based on 176 Google ratings in the
+                            current public listing.
+                        </span>
+                    </p>
+
+                </div>
+
+
+                <a class="map-btn"
+                   href="https://www.google.com/maps/search/?api=1&query=Spandana+Bar+%26+Family+Restaurant+Davanagere"
+                   target="_blank">
+
+                    📍 OPEN IN GOOGLE MAPS
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <h3>SPANDANA</h3>
+
+    <p>
+        BAR & FAMILY RESTAURANT • DAVANAGERE
+    </p>
+
+    <div class="legal">
+        Please enjoy responsibly. Availability, menu items,
+        prices and timings should be confirmed with the restaurant.
+    </div>
+
+</footer>
+
+
+<a class="float-call"
+   href="tel:+919482677657"
+   aria-label="Call Spandana Restaurant">
+    ☎
+</a>
+
+
+</body>
+  </html>
